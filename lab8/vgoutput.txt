@@ -1,0 +1,642 @@
+==3579== Memcheck, a memory error detector
+==3579== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==3579== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==3579== Command: /home/rashidmd/ece244/lab6/dist/Debug_Valgrind/GNU-Linux-x86/lab6
+==3579== Parent PID: 3578
+==3579== 
+==3579== Conditional jump or move depends on uninitialised value(s)
+==3579==    at 0x804A709: Composite::setShapeColours(Shape**, std::string) (Composite.cpp:47)
+==3579==    by 0x804A6A2: Composite::setShapeColours(Shape**, std::string) (Composite.cpp:49)
+==3579==    by 0x804A50D: Composite::Composite(std::string, std::string, float, float, std::string*, int, ShapeArray*) (Composite.cpp:38)
+==3579==    by 0x805578F: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:273)
+==3579==    by 0x80546A7: parser(ShapeArray&) (main.cpp:70)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579==  Uninitialised value was created by a heap allocation
+==3579==    at 0x402C733: operator new(unsigned int) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x804AA3F: Composite::duplicate() (Composite.cpp:79)
+==3579==    by 0x804A415: Composite::Composite(std::string, std::string, float, float, std::string*, int, ShapeArray*) (Composite.cpp:29)
+==3579==    by 0x805578F: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:273)
+==3579==    by 0x80546A7: parser(ShapeArray&) (main.cpp:70)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579== 
+==3579== Conditional jump or move depends on uninitialised value(s)
+==3579==    at 0x804A709: Composite::setShapeColours(Shape**, std::string) (Composite.cpp:47)
+==3579==    by 0x804A6A2: Composite::setShapeColours(Shape**, std::string) (Composite.cpp:49)
+==3579==    by 0x804A6A2: Composite::setShapeColours(Shape**, std::string) (Composite.cpp:49)
+==3579==    by 0x804A50D: Composite::Composite(std::string, std::string, float, float, std::string*, int, ShapeArray*) (Composite.cpp:38)
+==3579==    by 0x805578F: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:273)
+==3579==    by 0x80546A7: parser(ShapeArray&) (main.cpp:70)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579==  Uninitialised value was created by a heap allocation
+==3579==    at 0x402C733: operator new(unsigned int) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x804AA3F: Composite::duplicate() (Composite.cpp:79)
+==3579==    by 0x804A8BB: Composite::Composite(Composite&) (Composite.cpp:67)
+==3579==    by 0x804AA50: Composite::duplicate() (Composite.cpp:79)
+==3579==    by 0x804A415: Composite::Composite(std::string, std::string, float, float, std::string*, int, ShapeArray*) (Composite.cpp:29)
+==3579==    by 0x805578F: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:273)
+==3579==    by 0x80546A7: parser(ShapeArray&) (main.cpp:70)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579== 
+==3579== Conditional jump or move depends on uninitialised value(s)
+==3579==    at 0x804A709: Composite::setShapeColours(Shape**, std::string) (Composite.cpp:47)
+==3579==    by 0x804A50D: Composite::Composite(std::string, std::string, float, float, std::string*, int, ShapeArray*) (Composite.cpp:38)
+==3579==    by 0x805578F: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:273)
+==3579==    by 0x80546A7: parser(ShapeArray&) (main.cpp:70)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579==  Uninitialised value was created by a heap allocation
+==3579==    at 0x402C733: operator new(unsigned int) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x805574E: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:273)
+==3579==    by 0x80546A7: parser(ShapeArray&) (main.cpp:70)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579== 
+==3579== Invalid read of size 4
+==3579==    at 0x42331CA: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==3579==    by 0x804ADFF: Composite::print(int&) (Composite.cpp:139)
+==3579==    by 0x804AD21: Composite::print() const (Composite.cpp:126)
+==3579==    by 0x804D27C: ShapeArray::printAll(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:160)
+==3579==    by 0x8054783: parser(ShapeArray&) (main.cpp:78)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579==  Address 0x44be3cc is 4 bytes inside a block of size 32 free'd
+==3579==    at 0x402BC1D: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x8049FCB: Circle::~Circle() (Circle.cpp:29)
+==3579==    by 0x804CB12: ShapeArray::~ShapeArray() (ShapeArray.cpp:34)
+==3579==    by 0x804AAC9: Composite::~Composite() (Composite.cpp:101)
+==3579==    by 0x804ABAC: Composite::~Composite() (Composite.cpp:103)
+==3579==    by 0x804D19E: ShapeArray::remove(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:147)
+==3579==    by 0x805474C: parser(ShapeArray&) (main.cpp:76)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579== 
+==3579== Invalid read of size 4
+==3579==    at 0x42331CA: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==3579==    by 0x804B067: Composite::print(int&) (Composite.cpp:166)
+==3579==    by 0x804AD21: Composite::print() const (Composite.cpp:126)
+==3579==    by 0x804D27C: ShapeArray::printAll(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:160)
+==3579==    by 0x8054783: parser(ShapeArray&) (main.cpp:78)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579==  Address 0x44be3cc is 4 bytes inside a block of size 32 free'd
+==3579==    at 0x402BC1D: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x8049FCB: Circle::~Circle() (Circle.cpp:29)
+==3579==    by 0x804CB12: ShapeArray::~ShapeArray() (ShapeArray.cpp:34)
+==3579==    by 0x804AAC9: Composite::~Composite() (Composite.cpp:101)
+==3579==    by 0x804ABAC: Composite::~Composite() (Composite.cpp:103)
+==3579==    by 0x804D19E: ShapeArray::remove(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:147)
+==3579==    by 0x805474C: parser(ShapeArray&) (main.cpp:76)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579== 
+==3579== Invalid read of size 4
+==3579==    at 0x42331CA: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==3579==    by 0x804B0B7: Composite::print(int&) (Composite.cpp:167)
+==3579==    by 0x804AD21: Composite::print() const (Composite.cpp:126)
+==3579==    by 0x804D27C: ShapeArray::printAll(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:160)
+==3579==    by 0x8054783: parser(ShapeArray&) (main.cpp:78)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579==  Address 0x44be3d0 is 8 bytes inside a block of size 32 free'd
+==3579==    at 0x402BC1D: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x8049FCB: Circle::~Circle() (Circle.cpp:29)
+==3579==    by 0x804CB12: ShapeArray::~ShapeArray() (ShapeArray.cpp:34)
+==3579==    by 0x804AAC9: Composite::~Composite() (Composite.cpp:101)
+==3579==    by 0x804ABAC: Composite::~Composite() (Composite.cpp:103)
+==3579==    by 0x804D19E: ShapeArray::remove(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:147)
+==3579==    by 0x805474C: parser(ShapeArray&) (main.cpp:76)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579== 
+==3579== Invalid read of size 4
+==3579==    at 0x42331CA: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==3579==    by 0x804B172: Composite::print(int&) (Composite.cpp:173)
+==3579==    by 0x804AD21: Composite::print() const (Composite.cpp:126)
+==3579==    by 0x804D27C: ShapeArray::printAll(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:160)
+==3579==    by 0x8054783: parser(ShapeArray&) (main.cpp:78)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579==  Address 0x44be3cc is 4 bytes inside a block of size 32 free'd
+==3579==    at 0x402BC1D: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x8049FCB: Circle::~Circle() (Circle.cpp:29)
+==3579==    by 0x804CB12: ShapeArray::~ShapeArray() (ShapeArray.cpp:34)
+==3579==    by 0x804AAC9: Composite::~Composite() (Composite.cpp:101)
+==3579==    by 0x804ABAC: Composite::~Composite() (Composite.cpp:103)
+==3579==    by 0x804D19E: ShapeArray::remove(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (ShapeArray.cpp:147)
+==3579==    by 0x805474C: parser(ShapeArray&) (main.cpp:76)
+==3579==    by 0x805448D: main (main.cpp:40)
+==3579== 
+==3579== 
+==3579== HEAP SUMMARY:
+==3579==     in use at exit: 20,934 bytes in 384 blocks
+==3579==   total heap usage: 2,066 allocs, 1,682 frees, 310,270 bytes allocated
+==3579== 
+==3579== 2 bytes in 1 blocks are still reachable in loss record 1 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4099F19: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 2 bytes in 1 blocks are still reachable in loss record 2 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4331C30: strdup (strdup.c:43)
+==3579==    by 0x4096428: _XlcResolveLocaleName (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A0F7: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 7 bytes in 1 blocks are still reachable in loss record 3 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4331C30: strdup (strdup.c:43)
+==3579==    by 0x401BD5B: ??? (in /lib/i386-linux-gnu/ld-2.15.so)
+==3579== 
+==3579== 8 bytes in 1 blocks are still reachable in loss record 4 of 49
+==3579==    at 0x402CC70: realloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4097427: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409793B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409961D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 8 bytes in 2 blocks are still reachable in loss record 5 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4097E66: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409961D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 12 bytes in 1 blocks are still reachable in loss record 6 of 49
+==3579==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4096FF1: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EBF: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 12 bytes in 1 blocks are still reachable in loss record 7 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x40A1CE6: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 20 bytes in 1 blocks are still reachable in loss record 8 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x409592B: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 9 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x40790EA: _XrmInternalStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4079281: XrmStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409379A: _XlcGetCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4093350: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 10 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40936FB: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 11 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4093721: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 12 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4093747: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 13 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409376D: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 14 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E7E: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 15 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8EA6: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 16 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8ED2: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 17 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8EF4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 18 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8F12: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 19 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8F34: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 20 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8F56: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 21 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8F78: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 22 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8F98: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 23 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FBA: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 24 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FDC: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 25 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A129B: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 26 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A12BF: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 27 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A12DD: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 28 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1305: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 29 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1327: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 30 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A134B: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 32 bytes in 1 blocks are still reachable in loss record 31 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1369: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 47 bytes in 5 blocks are still reachable in loss record 32 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093560: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 84 bytes in 1 blocks are still reachable in loss record 33 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x409701E: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EBF: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 96 bytes in 1 blocks are still reachable in loss record 34 of 49
+==3579==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x409700B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EBF: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 96 bytes in 2 blocks are still reachable in loss record 35 of 49
+==3579==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x40973F7: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409793B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409961D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 142 bytes in 18 blocks are still reachable in loss record 36 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x40944C5: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40953A9: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 144 bytes in 18 blocks are still reachable in loss record 37 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x409449B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40953A9: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 216 bytes in 18 blocks are still reachable in loss record 38 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4331C30: strdup (strdup.c:43)
+==3579==    by 0x40951B7: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 274 bytes in 18 blocks are still reachable in loss record 39 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4331C30: strdup (strdup.c:43)
+==3579==    by 0x4095322: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 304 bytes in 1 blocks are still reachable in loss record 40 of 49
+==3579==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x40958C8: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 360 bytes in 18 blocks are still reachable in loss record 41 of 49
+==3579==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x409519D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 400 bytes in 50 blocks are still reachable in loss record 42 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093883: _XlcAddCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409361E: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 633 bytes in 49 blocks are still reachable in loss record 43 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093A4B: _XlcCreateDefaultCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409360A: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 1,028 bytes in 50 blocks are still reachable in loss record 44 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x40939E0: _XlcCreateDefaultCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409360A: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 1,631 bytes in 50 blocks are still reachable in loss record 45 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093387: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 2,048 bytes in 1 blocks are still reachable in loss record 46 of 49
+==3579==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4078F53: _XrmInternalStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4079281: XrmStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409379A: _XlcGetCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4093350: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579== 
+==3579== 2,048 bytes in 1 blocks are still reachable in loss record 47 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x40959D5: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 2,400 bytes in 50 blocks are still reachable in loss record 48 of 49
+==3579==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4093999: _XlcCreateDefaultCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409360A: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x65766C64: ???
+==3579== 
+==3579== 8,176 bytes in 1 blocks are still reachable in loss record 49 of 49
+==3579==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==3579==    by 0x4078D13: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4079106: _XrmInternalStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4079281: XrmStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409379A: _XlcGetCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4093350: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==3579== 
+==3579== LEAK SUMMARY:
+==3579==    definitely lost: 0 bytes in 0 blocks
+==3579==    indirectly lost: 0 bytes in 0 blocks
+==3579==      possibly lost: 0 bytes in 0 blocks
+==3579==    still reachable: 20,934 bytes in 384 blocks
+==3579==         suppressed: 0 bytes in 0 blocks
+==3579== 
+==3579== For counts of detected and suppressed errors, rerun with: -v
+==3579== ERROR SUMMARY: 172 errors from 7 contexts (suppressed: 0 from 0)

@@ -1,0 +1,45 @@
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> head yellow center: (10.0,10.0) circle radius: 9.0
+leye blue center: (6.5,14.0) circle radius: 2.2
+reye blue center: (13.5,14.0) circle radius: 2.2
+mouth red center: (10.0,5.4) Polygon (7.0,4.0) (4.7,6.5) (7.0,5.4) (13.0,5.4) (15.3,6.5) (13.0,4.7)
+hat1 black center: (10.0,18.0) rectangle width: 14.0 height: 2.0
+hat2 black center: (10.0,20.3) triangle (5.0,19.0) (10.0,23.0) (15.0,19.0)
+small black center: (5.0,-15.0) circle radius: 0.3
+> Passing control to graphics window. Click Proceed to return control to this command window
+Control returned to command window
+> Success
+> Error: shape doesnotexist does not exist
+> Success
+> Success
+> head yellow center: (10.0,10.0) circle radius: 9.0
+leye blue center: (6.5,14.0) circle radius: 2.2
+reye blue center: (13.5,14.0) circle radius: 2.2
+mouth red center: (10.0,5.4) Polygon (7.0,4.0) (4.7,6.5) (7.0,5.4) (13.0,5.4) (15.3,6.5) (13.0,4.7)
+hat1 black center: (10.0,18.0) rectangle width: 14.0 height: 2.0
+hat2 black center: (10.0,20.3) triangle (5.0,19.0) (10.0,23.0) (15.0,19.0)
+small black center: (5.0,-15.0) circle radius: 0.3
+face child center: (10.0,-6.4) composite components: 6
+{
+   head yellow center: (0.0,-1.8) circle radius: 4.5
+   leye blue center: (-1.8,0.2) circle radius: 1.1
+   reye blue center: (1.8,0.2) circle radius: 1.1
+   mouth red center: (0.0,-4.1) Polygon (3.5,2.0) (2.3,3.2) (3.5,2.7) (6.5,2.7) (7.7,3.2) (6.5,2.3)
+   hat1 black center: (0.0,2.2) rectangle width: 7.0 height: 1.0
+   hat2 black center: (0.0,3.4) triangle (-2.5,2.7) (0.0,4.7) (2.5,2.7)
+}
+> Passing control to graphics window. Click Proceed to return control to this command window
+Control returned to command window
+> Success
+> Success
+> Passing control to graphics window. Click Proceed to return control to this command window
+Control returned to command window
+> 

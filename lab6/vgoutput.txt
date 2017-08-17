@@ -1,0 +1,550 @@
+==8611== Memcheck, a memory error detector
+==8611== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==8611== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==8611== Command: /home/rashidmd/ece244/lab6/dist/Debug_Valgrind/GNU-Linux-x86/lab6
+==8611== Parent PID: 8610
+==8611== 
+==8611== 
+==8611== HEAP SUMMARY:
+==8611==     in use at exit: 23,461 bytes in 396 blocks
+==8611==   total heap usage: 1,991 allocs, 1,595 frees, 247,927 bytes allocated
+==8611== 
+==8611== 2 bytes in 1 blocks are still reachable in loss record 1 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4099F19: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 2 bytes in 1 blocks are still reachable in loss record 2 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4331C30: strdup (strdup.c:43)
+==8611==    by 0x4096428: _XlcResolveLocaleName (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A0F7: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 7 bytes in 1 blocks are still reachable in loss record 3 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4331C30: strdup (strdup.c:43)
+==8611==    by 0x401BD5B: ??? (in /lib/i386-linux-gnu/ld-2.15.so)
+==8611== 
+==8611== 8 bytes in 1 blocks are still reachable in loss record 4 of 51
+==8611==    at 0x402CC70: realloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4097427: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409793B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409961D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 8 bytes in 2 blocks are still reachable in loss record 5 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4097E66: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409961D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 12 bytes in 1 blocks are still reachable in loss record 6 of 51
+==8611==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4096FF1: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EBF: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 12 bytes in 1 blocks are still reachable in loss record 7 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x40A1CE6: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 20 bytes in 1 blocks are still reachable in loss record 8 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x409592B: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 9 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x40790EA: _XrmInternalStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4079281: XrmStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409379A: _XlcGetCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4093350: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 10 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40936FB: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 11 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4093721: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 12 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4093747: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 13 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409376D: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 14 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E7E: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 15 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8EA6: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 16 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8ED2: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 17 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8EF4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 18 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8F12: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 19 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8F34: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 20 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8F56: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 21 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8F78: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 22 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8F98: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 23 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FBA: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 24 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FDC: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 25 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A129B: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 26 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A12BF: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 27 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A12DD: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 28 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1305: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 29 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1327: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 30 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A134B: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 32 bytes in 1 blocks are still reachable in loss record 31 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093EB3: _XlcSetConverter (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1369: _XlcAddUtf8Converters (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8FE4: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 47 bytes in 5 blocks are still reachable in loss record 32 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093560: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 84 bytes in 1 blocks are still reachable in loss record 33 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x409701E: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EBF: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 96 bytes in 1 blocks are still reachable in loss record 34 of 51
+==8611==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x409700B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EBF: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 96 bytes in 2 blocks are still reachable in loss record 35 of 51
+==8611==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x40973F7: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409793B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409961D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 103 bytes in 6 blocks are indirectly lost in loss record 36 of 51
+==8611==    at 0x402C733: operator new(unsigned int) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4231603: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==8611==    by 0x423294E: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned int) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==8611==    by 0x4232A7D: std::string::reserve(unsigned int) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==8611==    by 0x4232DB9: std::string::append(char const*, unsigned int) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==8611==    by 0x41E2D97: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17)
+==8611==    by 0x8054B93: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:264)
+==8611==    by 0x8053DDF: parser(ShapeArray&) (main.cpp:74)
+==8611==    by 0x8053BC5: main (main.cpp:41)
+==8611== 
+==8611== 142 bytes in 18 blocks are still reachable in loss record 37 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x40944C5: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40953A9: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 144 bytes in 18 blocks are still reachable in loss record 38 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x409449B: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40953A9: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 216 bytes in 18 blocks are still reachable in loss record 39 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4331C30: strdup (strdup.c:43)
+==8611==    by 0x40951B7: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 274 bytes in 18 blocks are still reachable in loss record 40 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4331C30: strdup (strdup.c:43)
+==8611==    by 0x4095322: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 304 bytes in 1 blocks are still reachable in loss record 41 of 51
+==8611==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x40958C8: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 360 bytes in 18 blocks are still reachable in loss record 42 of 51
+==8611==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x409519D: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40954D0: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40957D4: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40B8E39: _XlcDefaultLoader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 400 bytes in 50 blocks are still reachable in loss record 43 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093883: _XlcAddCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409361E: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 633 bytes in 49 blocks are still reachable in loss record 44 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093A4B: _XlcCreateDefaultCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409360A: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 1,028 bytes in 50 blocks are still reachable in loss record 45 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x40939E0: _XlcCreateDefaultCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409360A: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 1,631 bytes in 50 blocks are still reachable in loss record 46 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093387: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 2,048 bytes in 1 blocks are still reachable in loss record 47 of 51
+==8611==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4078F53: _XrmInternalStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4079281: XrmStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409379A: _XlcGetCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4093350: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611== 
+==8611== 2,048 bytes in 1 blocks are still reachable in loss record 48 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x40959D5: _XlcCreateLocaleDataBase (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A133: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 2,400 bytes in 50 blocks are still reachable in loss record 49 of 51
+==8611==    at 0x402B629: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4093999: _XlcCreateDefaultCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409360A: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1E41: _XlcCurrentLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x65766C64: ???
+==8611== 
+==8611== 2,527 (2,424 direct, 103 indirect) bytes in 6 blocks are definitely lost in loss record 50 of 51
+==8611==    at 0x402C269: operator new[](unsigned int) (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x804A8CC: Composite::getShapeNames() const (Composite.cpp:72)
+==8611==    by 0x804A618: Composite::Composite(Composite const&) (Composite.cpp:45)
+==8611==    by 0x804A88A: Composite::duplicate() (Composite.cpp:62)
+==8611==    by 0x804A3A2: Composite::Composite(std::string, std::string, float, float, std::string*, int, ShapeArray*) (Composite.cpp:28)
+==8611==    by 0x8054E61: addComposite(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&, ShapeArray&) (main.cpp:285)
+==8611==    by 0x8053DDF: parser(ShapeArray&) (main.cpp:74)
+==8611==    by 0x8053BC5: main (main.cpp:41)
+==8611== 
+==8611== 8,176 bytes in 1 blocks are still reachable in loss record 51 of 51
+==8611==    at 0x402CB7A: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8611==    by 0x4078D13: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4079106: _XrmInternalStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4079281: XrmStringToQuark (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409379A: _XlcGetCharSet (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4093350: _XlcAddCT (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409368E: _XlcInitCTInfo (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x409A02F: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099612: ??? (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x4099EDB: _XlcCreateLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40BCFB7: _XlcUtf8Loader (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611==    by 0x40A1CD4: _XOpenLC (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+==8611== 
+==8611== LEAK SUMMARY:
+==8611==    definitely lost: 2,424 bytes in 6 blocks
+==8611==    indirectly lost: 103 bytes in 6 blocks
+==8611==      possibly lost: 0 bytes in 0 blocks
+==8611==    still reachable: 20,934 bytes in 384 blocks
+==8611==         suppressed: 0 bytes in 0 blocks
+==8611== 
+==8611== For counts of detected and suppressed errors, rerun with: -v
+==8611== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

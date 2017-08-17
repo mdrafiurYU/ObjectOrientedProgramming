@@ -1,0 +1,96 @@
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> Success
+> head yellow center: (10.0,10.0) circle radius: 9.0
+leye blue center: (6.5,14.0) circle radius: 2.2
+reye blue center: (13.5,14.0) circle radius: 2.2
+mouth red center: (10.0,5.4) polygon (7.0,4.0) (4.7,6.5) (7.0,5.4) (13.0,5.4) (15.3,6.5) (13.0,4.7)
+hat1 black center: (10.0,18.0) rectangle width: 14.0 height: 2.0
+hat2 black center: (10.0,20.3) triangle (5.0,19.0) (10.0,23.0) (15.0,19.0)
+small black center: (5.0,-15.0) circle radius: 0.3
+> Passing control to graphics window. Click Proceed to return control to this command window
+Control returned to command window
+> Success
+> Error: shape doesnotexist does not exist
+> Success
+> Success
+> head yellow center: (10.0,10.0) circle radius: 9.0
+leye blue center: (6.5,14.0) circle radius: 2.2
+reye blue center: (13.5,14.0) circle radius: 2.2
+mouth red center: (10.0,5.4) polygon (7.0,4.0) (4.7,6.5) (7.0,5.4) (13.0,5.4) (15.3,6.5) (13.0,4.7)
+hat1 black center: (10.0,18.0) rectangle width: 14.0 height: 2.0
+hat2 black center: (10.0,20.3) triangle (5.0,19.0) (10.0,23.0) (15.0,19.0)
+small black center: (5.0,-15.0) circle radius: 0.3
+face child center: (10.0,-6.4) composite components: 6
+{
+   head yellow center: (0.0,-1.8) circle radius: 4.5
+   leye blue center: (-1.8,0.2) circle radius: 1.1
+   reye blue center: (1.8,0.2) circle radius: 1.1
+   mouth red center: (0.0,-4.1) polygon (-1.5,-4.8) (-2.7,-3.6) (-1.5,-4.1) (1.5,-4.1) (2.7,-3.6) (1.5,-4.5)
+   hat1 black center: (0.0,2.2) rectangle width: 7.0 height: 1.0
+   hat2 black center: (0.0,3.4) triangle (-2.5,2.7) (0.0,4.7) (2.5,2.7)
+}
+> Passing control to graphics window. Click Proceed to return control to this command window
+Control returned to command window
+> Success
+> Success
+> Passing control to graphics window. Click Proceed to return control to this command window
+Control returned to command window
+> Success
+> Success
+> Success
+> Success
+> Success
+> leye blue center: (6.5,14.0) circle radius: 2.2
+reye blue center: (13.5,14.0) circle radius: 2.2
+mouth red center: (10.0,5.4) polygon (7.0,4.0) (4.7,6.5) (7.0,5.4) (13.0,5.4) (15.3,6.5) (13.0,4.7)
+hat1 black center: (10.0,18.0) rectangle width: 14.0 height: 2.0
+hat2 black center: (10.0,20.3) triangle (5.0,19.0) (10.0,23.0) (15.0,19.0)
+small black center: (5.0,-15.0) circle radius: 0.3
+facecopy child center: (0.0,-6.4) composite components: 1
+{
+   face child center: (0.0,0.0) composite components: 6
+   {
+      head yellow center: (0.0,-1.8) circle radius: 4.5
+      leye blue center: (-1.8,0.2) circle radius: 1.1
+      reye blue center: (1.8,0.2) circle radius: 1.1
+      mouth red center: (0.0,-4.1) polygon (-1.5,-4.8) (-2.7,-3.6) (-1.5,-4.1) (1.5,-4.1) (2.7,-3.6) (1.5,-4.5)
+      hat1 black center: (0.0,2.2) rectangle width: 7.0 height: 1.0
+      hat2 black center: (0.0,3.4) triangle (-2.5,2.7) (0.0,4.7) (2.5,2.7)
+   }
+}
+twoface grey55 center: (31.0,-6.4) composite components: 2
+{
+   face child center: (2.5,0.0) composite components: 6
+   {
+      head yellow center: (0.0,-0.9) circle radius: 2.3
+      leye blue center: (-0.9,0.1) circle radius: 0.6
+      reye blue center: (0.9,0.1) circle radius: 0.6
+      mouth red center: (0.0,-2.1) polygon (-0.8,-2.4) (-1.3,-1.8) (-0.8,-2.1) (0.8,-2.1) (1.3,-1.8) (0.8,-2.2)
+      hat1 black center: (0.0,1.1) rectangle width: 3.5 height: 0.5
+      hat2 black center: (0.0,1.7) triangle (-1.2,1.3) (0.0,2.3) (1.2,1.3)
+   }
+   facecopy child center: (-2.5,0.0) composite components: 1
+   {
+      face child center: (0.0,0.0) composite components: 6
+      {
+         head yellow center: (0.0,-0.9) circle radius: 2.3
+         leye blue center: (-0.9,0.1) circle radius: 0.6
+         reye blue center: (0.9,0.1) circle radius: 0.6
+         mouth red center: (0.0,-2.1) polygon (-0.8,-2.4) (-1.3,-1.8) (-0.8,-2.1) (0.8,-2.1) (1.3,-1.8) (0.8,-2.2)
+         hat1 black center: (0.0,1.1) rectangle width: 3.5 height: 0.5
+         hat2 black center: (0.0,1.7) triangle (-1.2,1.3) (0.0,2.3) (1.2,1.3)
+      }
+   }
+}
+> Total area: 215.9
+> Total perimeter: 270.4
+> Passing control to graphics window. Click Proceed to return control to this command window
+Control returned to command window
+> 

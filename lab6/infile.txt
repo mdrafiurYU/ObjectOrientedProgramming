@@ -1,0 +1,20 @@
+circ head yellow 10 10 1.002
+scale head 9
+circ leye blue 6.5 14 2.2
+circ reye blue 6.5 14 2.2
+translate 6.5 14.7 7 0
+poly mouth red 7 4 4.7 6.5 7 5.4 13 5.4 15.3 6.5 13 4.7
+rect hat1 black 10 18 14 2
+tri hat2 black 5 19 10 23 15 19
+circ small black 5 -15 0.3
+printall
+draw
+composite face child head leye reye mouth hat1 hat2
+composite compbad red doesnotexist
+translate 10 10 0 -20
+scale face 0.5
+printall
+draw
+composite facecopy child face
+translate 10 -8 -10 0
+draw

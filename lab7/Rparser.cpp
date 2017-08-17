@@ -1,0 +1,221 @@
+#include "Rparser.h"
+
+/************** Global variables ************************************/
+// Create a window with name = “Resistor display” and a white background.
+// Making it global so we can draw to it from anywhere.
+easygl window ("Resistor display", WHITE);
+
+// Make a global scope pointer to the nodelist so your drawing routine can access it.
+// Make sure you set this pointer to a valid value early in your program!
+NodeList* g_NodeListPtr;
+
+/*************** parsing and responding to the draw command *********/
+// Suggested function structure for a new routine in Rparser.cpp to handle the
+// draw command.
+void parse_draw (NodeList& nodeList) {
+    
+    float xleft, ybottom, xright, ytop;
+    
+    // Compute drawing coordinates for each node & resistor. Update the
+    // 4 coordinates (passed by reference) to give appropriate coordinates for
+    // the window corners.
+    nodeList.set_draw_coords (xleft, ybottom, xright, ytop);
+    
+    // Tell the graphics package what coordinate system we will draw in.
+    window.set_world_coordinates (xleft, ybottom, xright, ytop);
+    g_NodeListPtr = &nodeList; // Set up global pointer.
+    nodeList.draw (); // Draw the network
+    cout << "Draw: control passed to graphics window." << endl;
+    
+    // This function will not return until the “Proceed” button is pushed.
+    window.gl_event_loop ();
+    cout << "Draw: complete; responding to commands again" << endl;
+}
+
+/** Redrawing the screen when the graphics package calls you (drawscreen callback) **/
+void easygl::drawscreen () {
+    // Clear the area in the red box in Figure 1 (the graphics area).
+    // Need to do this to have a blank area before redrawing.
+    window.gl_clearscreen ();
+    g_NodeListPtr->draw (); // Call your routine that does all the work of drawing.
+    // Note how we needed the global pointer to nodeList.
+}
+
+/*
+* All the parse_<command> functions parse the arguments for the given command. Extracts the arguments from lineStream which 
+* is passed in by reference. As the function parse arguments from left to right they print an error message if any error 
+* occurs, and immediately return to prevent any further error messages from being printed. If it passes all the error 
+* checking functions, the line is valid and prints the appropriate output for that command.
+*/
+void parse_insertR (stringstream &lineStream, NodeList &listHead) 
+{
+   string name;
+   double resistance;
+   int nodeid_1, nodeid_2;
+   int nodeIDs[2];
+   
+   lineStream >> name >> resistance >> nodeid_1 >> nodeid_2;
+
+   nodeIDs[0] = nodeid_1;
+   nodeIDs[1] = nodeid_2;
+
+   for(int i = 0; i < NODEID_ARRAY_SIZE; i++)
+   {
+       if(listHead.findNode(nodeIDs[i]) == NULL)
+       {
+           Node *newNode = listHead.insertNode(nodeIDs[i], false);
+           ResistorList *newResList = newNode->getResList();
+           newResList->insertResistor(name, resistance, nodeIDs);
+       }
+       
+       else
+           ((listHead.findNode(nodeIDs[i]))->getResList())->insertResistor(name, resistance, nodeIDs);
+   }
+   
+   cout << fixed;
+   cout << "Inserted: resistor " << name << " ";
+   cout << setprecision(2) << resistance << " Ohms " << nodeid_1 << " -> " << nodeid_2 << endl;
+}
+
+void parse_setV (stringstream &lineStream, NodeList &listHead)
+{
+    int nodeid;
+    double voltage;
+    
+    lineStream >> nodeid >> voltage;
+    
+    if(listHead.findNode(nodeid) == NULL)
+        Node *newNode = listHead.insertNode(nodeid, VOLTAGE_UNKNOWN);
+    
+    listHead.findNode(nodeid)->setNodeVoltage(voltage);
+    listHead.findNode(nodeid)->setV_status(VOLTAGE_KNOWN);
+    
+    cout << fixed;
+    cout << "Set: node " << setprecision(2) << nodeid << " to " << voltage << " Volts" << endl;
+}
+
+void  parse_unsetV (stringstream &lineStream, NodeList &listHead)
+{
+    int nodeid;
+    
+    lineStream >> nodeid;
+    
+    if(listHead.findNode(nodeid) == NULL)
+        Node *newNode = listHead.insertNode(nodeid, VOLTAGE_UNKNOWN);
+    
+    else
+        listHead.findNode(nodeid)->setV_status(VOLTAGE_UNKNOWN);
+    
+    cout << "Unset: the solver will determine the voltage of node " << nodeid << endl;
+}
+
+void solveNetwork (NodeList &listHead) 
+{   
+    if(!listHead.isAnySet())
+        cout << "Error: no nodes have their voltage set" << endl; 
+
+    else
+    {
+        listHead.initializeNodeVoltages ();
+        
+        while(!listHead.isAllSet() && listHead.getChangeOfVoltage() > MIN_ITERATION_CHANGE)
+        {
+            listHead.calculateNodeVoltages ();
+        }
+
+        listHead.printNodeVoltages (listHead.isAllSet());
+    }
+}
+
+void parse_modifyR (stringstream &lineStream, NodeList &listHead) 
+{    
+   string resName;
+   double resistance;
+
+   lineStream >> resName >> resistance;  
+              
+   if(listHead.resistorExists(resName) == NULL)
+       cout << "Error: resistor " << resName << " not found" << endl;
+              
+   else
+   {            
+       cout << fixed;
+       cout << "Modified: resistor " << resName << " from ";           
+       cout << setprecision(2) << listHead.resistorExists(resName)->getResistance() << " Ohms to ";
+       cout << setprecision(2) << resistance << " Ohms" << endl;
+
+       listHead.changeResistance(listHead.resistorExists(resName), resistance);
+   }
+}
+
+
+void parse_printR (stringstream &lineStream, NodeList &listHead)
+{
+   string resName;
+   
+   lineStream >> resName;  
+
+   if(listHead.resistorExists(resName) == NULL)
+       cout << "Error: resistor " << resName << " not found" << endl;
+
+   else
+   {
+       cout << "Print:" << endl;
+       listHead.resistorExists(resName)->print();
+   }
+}
+
+// Checks and returns 'true' if the given string type parameter is consists of only digits '0-9' or '-' sign; otherwise 'false'
+bool is_digits (const string &str)
+{
+   return str.find_first_not_of("-0123456789") == string::npos;
+}
+
+void parse_printNode (stringstream &lineStream, NodeList &listHead)
+{
+   int nodeid;
+   string argument;
+   
+   lineStream >> argument;
+   if (!is_digits(argument))
+   {       
+       cout << "Print:" << endl;
+       listHead.printList();
+   }
+   
+   else
+   {
+       istringstream (argument) >> nodeid;
+   
+       cout << "Print:" << endl;
+       listHead.printNode(nodeid);     
+   }
+
+}
+
+// All resistors are cleared and the Node array is updated so there is an empty network
+void parse_deleteR (stringstream &lineStream, NodeList &listHead)
+{
+   string arg;
+   
+   lineStream >> arg;  
+ 
+   if(arg.compare(KEYWORD) == 0)
+   {
+       cout << "Deleted: all resistors" << endl;
+       listHead.deleteNodeList();
+   }
+   
+   else
+   {
+       if(listHead.resistorExists(arg) == NULL)
+           cout << "Error: resistor " << arg << " not found" << endl;
+                    
+       else
+       {
+           listHead.deleteResistor(listHead.resistorExists(arg));
+           cout << "Deleted: resistor " << arg << endl;
+       }
+   }
+}
+

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>vgoutput.txt</itemPath>
+    </logicalFolder>
+    <itemPath>Circle.cpp</itemPath>
+    <itemPath>Circle.h</itemPath>
+    <itemPath>Composite.cpp</itemPath>
+    <itemPath>Composite.h</itemPath>
+    <itemPath>Polygon.cpp</itemPath>
+    <itemPath>Polygon.h</itemPath>
+    <itemPath>Rectangle.cpp</itemPath>
+    <itemPath>Rectangle.h</itemPath>
+    <itemPath>Shape.cpp</itemPath>
+    <itemPath>Shape.h</itemPath>
+    <itemPath>ShapeArray.cpp</itemPath>
+    <itemPath>ShapeArray.h</itemPath>
+    <itemPath>Triangle.cpp</itemPath>
+    <itemPath>Triangle.h</itemPath>
+    <itemPath>easygl.cpp</itemPath>
+    <itemPath>easygl.h</itemPath>
+    <itemPath>easygl_constants.h</itemPath>
+    <itemPath>graphics.cpp</itemPath>
+    <itemPath>graphics.h</itemPath>
+    <itemPath>infile.txt</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <commandLine>-lX11</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="Circle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Circle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Composite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Composite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Polygon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Polygon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Rectangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Rectangle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Shape.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Shape.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ShapeArray.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ShapeArray.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Triangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Triangle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easygl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="easygl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easygl_constants.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="infile.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Circle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Circle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Composite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Composite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Polygon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Polygon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Rectangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Rectangle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Shape.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Shape.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ShapeArray.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ShapeArray.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Triangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Triangle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easygl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="easygl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easygl_constants.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="infile.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_Valgrind" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <commandLine>-lX11</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="Circle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Circle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Composite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Composite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Polygon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Polygon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Rectangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Rectangle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Shape.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Shape.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ShapeArray.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ShapeArray.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Triangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Triangle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easygl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="easygl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easygl_constants.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="infile.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
